@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	#topGround {
+		background-color: #AFEEEE;
+		width: 100%;
+		display: flex;
+		padding: 10px;
+		margin: -10px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	#btnWrite {
+		margin-left: 70%;
+	}
+	#BoardTitle {
+		width: 80%;
+		border: 2px;
+		border-style: solid;
+		border-left-style: none;
+		border-right-style: none;
+	}
+	#thead {
+		display: flex;
+		flex-grow: 1;
+	}
+	h1 {
+		animation-name:show;	
+		animation-duration: 0.6s;
+		color: white;
+	}
+	@keyframes show{
+	0% {margin-left: 100%; width: 300%;}
+	100% {margin-left: 0%; width: 100%;}
+	}
+</style>
+<meta charset="UTF-8">
+<title>Team명  조이박</title>
+</head>
+<body>
+<form action="" method="post">
+	<div id="topGround">
+	<div>
+	<h1>JSP 팀 조이박</h1>
+	</div>
+	</div>
+	<div id="BoardArea" align="center">
+	<h2>게시판</h2>
+	<button id="btnWrite" value="글쓰기" onclick=>글쓰기</button>
+	<div id="BoardTitle">
+	<table>
+	<thead>
+		<tr>
+			<th>번호</th>
+			<th>제목</th>
+			<th>작성시간</th>
+			<th>글쓴이</th>
+		</tr>
+	</thead>
+	</div>
+	<tbody>
+		
+	</tbody>
+	</table>
+	</div>
+</body>
+</html>
