@@ -2,17 +2,22 @@
 <html>
 <head>
 <style>
+.text-flicker-in-glow {-webkit-animation: text-flicker-in-glow 1s linear both;animation: text-flicker-in-glow 1s linear both;background-image: url("C:/Users/zzang/Documents/Alogo.png"); width: 100px; height: 100px; background-size: 100% 100%; animation-fill-mode: forwards;}
 .focus-in-contract {-webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;color: white;position: absolute;top: 100px;left: 44%;}
 .focus-in-contract1 {-webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;color: white;position: absolute;top: 200px;left: 33%;}
 @-webkit-keyframes focus-in-contract {0% {letter-spacing: 1em;-webkit-filter: blur(12px);filter: blur(12px);opacity: 0;}100% {-webkit-filter: blur(0px);filter: blur(0px);opacity: 1;}}
 @keyframes focus-in-contract {0% {letter-spacing: 1em;-webkit-filter: blur(12px);filter: blur(12px);opacity: 0;}100% {-webkit-filter: blur(0px);filter: blur(0px);opacity: 1;}}
 *{margin: 0; padding: 0;}
-#logo {background-image: url("C:/Users/zzang/Documents/elden-ring-header-animated.gif"); width: 100px; height: 100px;}
-#showContent {position: absolute; width: 100%; height: 100%; background-image: url("C:/Users/zzang/Documents/elden-ring-header-animated.gif"); background-repeat: no-repeat; background-size: 100% 100%;}
+#showContent {position: absolute; width: 100%; height: 100%; background-image: url("C:/JSP/LearnJSP/Web-2022-JSP/jsp2-2/WebContent/TeamProject/forHonor.gif"); background-repeat: no-repeat; background-size: 100% 100%;}
 #slideCard {background-color: black; position: absolute; width: 100%; height: 100%; animation-name: firstStart; animation-duration: 0.7s; animation-fill-mode: forwards;}
 @keyframes firstStart {0% {top: 0%;} 100% {top: 100%; height:0%;}}
-#btnYes {border-style: solid; border-color: #40E0D0; background-color: #7FFFD4; position: absolute; width: 200px; height: 50px; left: 30%; top: 60%; border-radius: 3px;}
+#btnYes {border-style: solid; border-color: #40E0D0; background-color: #7FFFD4; position: absolute; width: 200px; height: 50px; left: 30%; top: 60%; border-radius: 3px; opacity: 1;}
 #btnNo {border-style: solid; border-color: #40E0D0; background-color: #7FFFD4; position: absolute; width: 200px; height: 50px; left: 55%; top: 60%; border-radius: 3px;}
+#fontBackArea {position: absolute; width: 100%; height: 100%; animation-name: fontArea; animation-fill-mode: forwards; animation-delay: 0.8s; animation-duration: 1s;}
+@-webkit-keyframes fontArea {0% {opacity: 0; background-color: black;} 100% {background-color: black; opacity: 0.6;}}
+@keyframes fontArea {0% {opacity: 0; background-color: black;} 100% {background-color: black; opacity: 0.6;}}
+@-webkit-keyframes text-flicker-in-glow {0% {opacity: 0;}10% {opacity: 0;text-shadow: none;}10.1% {opacity: 1;text-shadow: none;}10.2% {opacity: 0;text-shadow: none;}20% {opacity: 0;text-shadow: none;}20.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);}20.6% {opacity: 0;text-shadow: none;}30% {opacity: 0;text-shadow: none;}30.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}30.5% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}30.6% {opacity: 0;text-shadow: none;}45% {opacity: 0;text-shadow: none;}45.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}50% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}55% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}55.1% {opacity: 0;text-shadow: none;}57% {opacity: 0;text-shadow: none;}57.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);}60% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);}60.1% {opacity: 0;text-shadow: none;}65% {opacity: 0;text-shadow: none;}65.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);}75% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);}75.1% {opacity: 0;text-shadow: none;}77% {opacity: 0;text-shadow: none;}77.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);}85% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);}85.1% {opacity: 0;text-shadow: none;}86% {opacity: 0;text-shadow: none;}86.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);}100% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);}}
+@keyframes text-flicker-in-glow {0% {opacity: 0;}10% {opacity: 0;text-shadow: none;}10.1% {opacity: 1;text-shadow: none;}10.2% {opacity: 0;text-shadow: none;}20% {opacity: 0;text-shadow: none;}20.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);}20.6% {opacity: 0;text-shadow: none;}30% {opacity: 0;text-shadow: none;}30.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}30.5% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}30.6% {opacity: 0;text-shadow: none;}45% {opacity: 0;text-shadow: none;}45.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}50% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}55% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);}55.1% {opacity: 0;text-shadow: none;}57% {opacity: 0;text-shadow: none;}57.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);}60% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);}60.1% {opacity: 0;text-shadow: none;}65% {opacity: 0;text-shadow: none;}65.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);}75% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);}75.1% {opacity: 0;text-shadow: none;}77% {opacity: 0;text-shadow: none;}77.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);}85% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);}85.1% {opacity: 0;text-shadow: none;}86% {opacity: 0;text-shadow: none;}86.1% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);}100% {opacity: 1;text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);}}
 </style>
 <meta charset="UTF-8">
 <title>Introduction</title>
@@ -20,12 +25,15 @@
 <body>
 <form>
 <div id="showContent">
-	<div id="logo"></div>
+<div id="fontBackArea">
+	<div class="text-flicker-in-glow"></div>
+	
 	<h1 class="focus-in-contract">안녕하세요</h1>
  	<h1 class="focus-in-contract1">이 사이트를 처음 이용하시나요?</h1>
  	<input type="button" value="네, 처음입니다" id="btnYes">
  	<input type="button" value="아니오, 계정이 있습니다" id="btnNo">
 	<div id="slideCard"></div>
+	</div>
 </div>
 </form>
 </body>
