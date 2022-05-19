@@ -9,14 +9,14 @@ function setHover() {
         {borderBottomColor: "rgba(72,209,204,0)"},
         {borderBottomColor: "rgba(72,209,204,1)"}
     ], {
-        duration: 100,
+        duration: 50,
         fill: "forwards"
     });
     B.animate([
         {borderBottomColor: "rgba(72,209,204,0)"},
         {borderBottomColor: "rgba(72,209,204,1)"}
     ], {
-        duration: 500,
+        duration: 100,
         fill: "forwards"
     });
     C.animate([
@@ -35,14 +35,14 @@ function outHover() {
         {borderBottomColor: "rgba(72,209,204,1)"},
         {borderBottomColor: "rgba(72,209,204,0)"}
     ], {
-        duration: 100,
+        duration: 50,
         fill: "forwards"
     });
     B.animate([
         {borderBottomColor: "rgba(72,209,204,1)"},
         {borderBottomColor: "rgba(72,209,204,0)"}
     ], {
-        duration: 500,
+        duration: 100,
         fill: "forwards"
     });
     C.animate([
@@ -58,29 +58,37 @@ function scrollEvent() {
     let A = document.querySelector("#Category");
     let B = document.querySelector("#header");
     let C = this.scrollY;
+    let aT = A.style.top;
+    let bH = B.style.height;
     if(C > last_scrollTop) {
-        B.animate([
-            {height: "10%"},
-            {height: "0%"}
-        ], {
-            duration: 100,
-            fill: "forwards"
-        });
-        A.animate([
-            {top: "10%"},
-            {top: "0%"}
-        ], {
-            duration: 100,
-            fill: "forwards"
-        });
+        if(aT == '10%') {
+            B.style.height = "0%";
+            B.animate([
+                {height: "10%"},
+                {height: "0%"}
+            ], {
+                duration: 100,
+                fill: "forwards"
+            });
+            A.style.top = "0%";
+            A.animate([
+                {top: "10%"},
+                {top: "0%"}
+            ], {
+                duration: 100,
+                fill: "forwards"
+            });
+        }
     } else {
+        B.style.height= "10%";
         B.animate([
-            {top: "0%", height: "0%"},
-            {top: "0%", height: "10%"}
+            {height: "0%"},
+            {height: "10%"}
         ], {
             duration: 100,
             fill: "forwards"
         });
+        A.style.top= "10%";
         A.animate([
             {top: "0%"},
             {top: "10%"}
@@ -90,6 +98,8 @@ function scrollEvent() {
         });
     }
     last_scrollTop = C;
+    console.log(aT);
+    console.log(bH);
 }
 	onload = function() {
 		let A = document.querySelector("#Category");
